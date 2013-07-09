@@ -80,8 +80,8 @@ var clone = function(fn) {
 
 if(require.main == module) {
     program
-        .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
-        .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
+        .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists))
+        .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists))
         .option('-u, --url <app_url>', 'Path to bitstarter app')
         .parse(process.argv);
     
